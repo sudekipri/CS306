@@ -1,0 +1,33 @@
+INSERT INTO Patients (patient_id, patient_name, patient_age, patient_sex, emergency_contact)
+VALUES (00001, “Ali Kucuk”, 34, “m”, 5349865747)
+(00002, “Melek Yilmaz”, 19, “f”, 5530128692)
+(00003, “Egemen Mazak”, 68, “m”, 5458720198)
+(00004, “Secil Hondur”, 43, “f”, 5312847576)
+(00005, “Nuri Bolatturk”, 29, “m”, 5358769012)
+(00006, “Mine Koruk”, 20, “f”, 5312847576)
+(00007, “Begum Ayaz”, 7, “f”, 5327874332)
+(00008, “Mursit Coskun”, 52, “m”, 5312847576)
+
+INSERT INTO Students (student_,id, student_name, student_sex, student_salary, uni_name)
+VALUES (00001, “Alev Basan”, “f”, 4000, “Bahcesehir”)
+(00002, “Fatih Or”, “m”, 4200, “Istanbul”)
+(00003, “Umut Ozdes”, “m”, 3500, “Hacettepe”)
+(00004, “Eylem Akkan”, “f”, 4350, “Marmara”)
+(00005, “Cenk Bozoglan”, “m”, 4450, “Koc”)
+(00006, “Sudem Demirel”, “f”, 4000, “Istanbul”)
+(00007, “Omer Unalan”, “m”, 3900, “Yeditepe”)
+(00008, “Pelin Arbag”, “f”, 3700, “Ege”)
+
+CREATE TABLE Tutors (work_id INTEGER NOT NULL, student_id INTEGER, PRIMARY KEY (student_id), FOREIGN KEY (work_id) REFERENCES Employees, FOREIGN KEY (student_id) REFERENCES Students ) 
+
+INSERT INTO Tutors (student_id, work_id)
+VALUES (1, 2)
+(2, 3)
+(3, 4)
+(4, 5)
+(5, 7)
+(6, 2)
+(7, 8)
+(8, 1)
+
+

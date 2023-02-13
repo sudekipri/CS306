@@ -1,0 +1,168 @@
+INSERT INTO departments(dep_id, dep_name, manager)
+VALUES
+(00001, cardiology, 00001),
+(00002, icu, 00002),
+(00003, radiology, 00003),
+(00004, management, 00004),
+(00005, lab, 00005),
+(00006, infection, 00007),
+(00007, neurology, 00008)
+
+
+INSERT INTO employees(work_id, emp_name, emp_age, emp_sex, position, emp_salary)
+VALUES
+(00001, Caryl Beake, 65, m, doctor, 15000),
+(00002, Lucas Rogerson, 51, m, doctor, 15000),
+(00003, Malachi Samson, 36, m, doctor, 15000),
+(00004, Debbi Jacobs, 48, f, doctor, 15000),
+(00005, Damion Abramson, 34, m, doctor, 15000),
+(00006, Aaron Padmore, 60, m, nurse, 9000),
+(00007, Hillary Whinery, 29, f, doctor, 15000),
+(00008, Misty Coburn, 39, f, doctor, 15000),
+(00009, Harvey Bonney, 42, m, nurse, 9000),
+(00010, Rosemary Jinks, 25, f, nurse, 9000),
+(00011, Leta Green, 27, f, nurse, 9000),
+(00012, Madison Nicolson, 29, f, nurse, 9000)
+
+
+INSERT INTO  medical_reports(report_no, date, medication, treatment, bill)
+VALUES
+(00001, 5.12.2021, ‘Parole’, ‘Rest’, 100),
+(00002, 2.12.2021, ‘Parole’, ‘Rest’, 100),
+(00003, 22.11.2021, ‘Abraxane’, ‘chemotherapy', 10029,12),
+(00004, 18.9.2021, ‘Asprin’, ‘Massage’, 300),
+(00005, 17.9.2021, ‘Acetaminophen’, ‘Drink Fluid’, 727),
+(00006, 8.2.2020, ‘Local Anesthetics’, ‘Surgery’, 2300,22),
+(00007, 18.9.2021, ‘Imodium’, ‘Rest’, 100),
+(00008, 5.5.2021, ‘Methadoxine’, ‘Dehydration’, 727)
+
+
+INSERT INTO suppliers(supplier_name, supply_name, supply_date, quantity, unit_price)
+VALUES
+("McKesson", "Surgical Gloves", 11.01.2021, 1000, 10),
+("Henry Schein", "Surgical Mask", 24.01.2021, 10000, 15),
+("AmerisourceBergen", "Sphygmomanometer", 30.06.2021, 1000, 200),
+("AedLeader", "Defibrillators", 23.04.2021, 20, 400),
+("III Medical", "Anesthesia machines", 02.02.2021, 14, 2000),
+("Cnmeizhuo", "sterilizers", 23.08.2020, 2000, 10),
+("Norav Medical", "Electrocardiogram (EKG) machines", 05.06.2021, 7, 1300),
+("Px Medical", "Surgical tables", 30.06.2021, 15, 700)
+
+
+INSERT INTO insurance(company_name)
+VALUES
+("Aviva"),
+("Anadolu Sigorta"),
+("Achmea") ,
+("Euler Hermes"),
+("Allianz Partners"),
+("Marsh McLennan"),
+("Sompo Holdings"),
+("Groupama")
+
+
+INSERT INTO Patients (patient_id, patient_name, patient_age, patient_sex, emergency_contact)
+VALUES
+(00001, “Ali Kucuk”, 34, m, 5349865747),
+(00002, “Melek Yilmaz”, 19, f, 5530128692),
+(00003, “Egemen Mazak”, 68, m, 5458720198),
+(00004, “Secil Hondur”, 43, f, 5312847576),
+(00005, “Nuri Bolatturk”, 29, m, 5358769012),
+(00006, “Mine Koruk”, 20, f, 5312847576),
+(00007, “Begum Ayaz”, 7, f, 5327874332),
+(00008, “Mursit Coskun”, 52, m, 5312847576)
+
+INSERT INTO Students (student_,id, student_name, student_sex, student_salary, uni_name)
+VALUES
+(00001, “Alev Basan”, f, 4000, “Bahcesehir”),
+(00002, “Fatih Or”, m, 4200, “Istanbul”),
+(00003, “Umut Ozdes”, m, 3500, “Hacettepe”),
+(00004, “Eylem Akkan”, f, 4350, “Marmara”),
+(00005, “Cenk Bozoglan”, m, 4450, “Koc”),
+(00006, “Sudem Demirel”, f, 4000, “Istanbul”),
+(00007, “Omer Unalan”, m, 3900, “Yeditepe”),
+(00008, “Pelin Arbag”, f, 3700, “Ege”),
+
+
+INSERT INTO treats(patient_id, work_id)
+VALUES
+(00001, 00002),
+(00002, 00008),
+(00003, 00001),
+(00004, 00003),
+(00005, 00004),
+(00006, 00005),
+(00008, 00007),
+(00007, 00002)
+
+
+INSERT INTO works_in(work_id, dep_id)
+VALUES
+(00001, 00001),
+(00002, 00002),
+(00003, 00003),
+(00004, 00004),
+(00005, 00005),
+(00007, 00006),
+(00008, 00007),
+(00006, 00001),
+(00009, 00002),
+(000010, 00006),
+(000011, 00007),
+(000012, 00002)
+
+
+INSERT INTO  has (patient_id, report_no)
+VALUES
+(00001, 2),
+(00002, 3),
+(00003, 1),
+(00004, 8),
+(00005, 3),
+(00006, 8),
+(00007, 7),
+(00008, 4)
+
+
+INSERT INTO  writes(work_id, report_no)
+VALUES
+(00001, 2),
+(00002, 1),
+(00003, 3),
+(00004, 5),
+(00005, 3),
+(00007, 8),
+(00008, 7)
+
+
+INSERT INTO covers(patient_id, covered_expenses, company_name)
+VALUES
+(00001, 100, "Aviva"),
+(00002, 100, "Anadolu Sigorta"),
+(00003, 10029.12, "Achmea"),
+(00004, 300, "Euler Hermes"),
+(00005, 727, "Allianz Partners"),
+(00006, 2300.22, "Marsh McLennan"),
+(00007, 100, "Sompo Holdings"),
+(00008, 727, "Groupama")
+
+INSERT INTO supplies(supplier_name, dep_id)
+VALUES
+("McKesson", 00001),
+("Henry Schein", 00002),
+("AmerisourceBergen", 00003),
+("III Medical", 00005),
+("Cnmeizhuo", 00006),
+("Norav Medical", 00007)
+
+
+INSERT INTO Tutors (student_id, work_id)
+VALUES
+(1, 2),
+(2, 3),
+(3, 4),
+(4, 5),
+(5, 7),
+(6, 2),
+(7, 8),
+(8, 1)
